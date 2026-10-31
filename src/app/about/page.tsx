@@ -9,9 +9,9 @@ export default function AboutPage() {
       <Header />
       <main className="flex-1 max-w-2xl w-full mx-auto px-4 py-10 space-y-8">
         <section>
-          <h1 className="text-xl font-bold text-content mb-3">关于 LibreTV</h1>
+          <h1 className="text-xl font-bold text-content mb-3">关于 正版CCTV</h1>
           <p className="text-sm text-muted leading-relaxed">
-            LibreTV 是一个免费的在线视频搜索与观看平台。输入片名即可在多个点播源中聚合搜索，
+            正版CCTV 是一个免费的在线视频搜索与观看平台。输入片名即可在多个点播源中聚合搜索，
             无需注册、无内嵌广告、不存储任何视频文件。所有播放内容均来自第三方公开接口。
           </p>
         </section>
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <h2 className="text-base font-semibold text-content mb-2.5">免责声明</h2>
           <p className="text-sm text-faint leading-relaxed">
             本项目不存储、不制作任何视频内容，仅提供第三方公开接口的聚合与播放能力。
-            请尊重版权，所有内容的合法性由对应数据源负责。
+            请尊重版权，所有内容的合法性由对应数据源负责,不接受任何反驳，作者邮箱1797858757@qq.com。
           </p>
         </section>
       </main>
