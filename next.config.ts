@@ -22,6 +22,22 @@ const nextConfig: NextConfig = {
   env: { APP_VERSION: readAppVersion() },
   // 采集站/豆瓣等上游地址在运行时由用户配置，构建期无法枚举，关闭图片优化改用 <img>
   images: { unoptimized: true },
+  // Service Worker 不能被长缓存，否则改了 SW 用户要等很久才更新
+  async headers() {
+    return [
+      {
+        source: '/sw.js',
+        headers: [
+          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+          { key: 'Content-Type', value: 'application/javascript; charset=utf-8' },
+        ],
+      },
+      {
+        source: '/manifest.webmanifest',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=3600' }],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

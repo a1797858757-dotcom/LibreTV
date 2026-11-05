@@ -1,0 +1,13 @@
+# Service Worker 必须随时可更新，否则用户会长期卡在旧版本
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/javascript; charset=utf-8
+
+# 清单文件短缓存即可，改完能较快生效
+/manifest.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+# 图标长期缓存（文件名不带 hash，所以用 7 天折中）
+/icons/*
+  Cache-Control: public, max-age=604800
